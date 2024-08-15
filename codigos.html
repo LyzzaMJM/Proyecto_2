@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información sobre Códigos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/codigo.css">
+</head>
+<body>
+
+  <header id="main-header">
+      <nav class="main-nav" aria-label="Main navigation">
+          <h1 id="siteTitle">MorseMystery</h1>
+          <ul id="nav-list">
+              <li><a href="index.html" class="nav-link">Inicio</a></li>
+              <li><a href="menu.html" class="nav-link">Menú</a></li>
+              <li><a href="codigos.html" class="nav-link">Códigos</a></li>
+              <li><a href="morse.html" class="nav-link">Encriptador Morse</a></li>
+              <li><a href="cesar.html" class="nav-link">Encriptador César</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main id="main-content">
+    <h1 class="page-title">Información sobre Códigos</h1>
+
+    <section id="info-container" class="info-container">
+      <section class="info-section">
+        <a href="cesar.html" class="info-link">
+          <div class="overlay">Toca aquí</div>
+          <h2 class="info-title">Código César</h2>
+          <img id="cesarImage" src="recursos/cesar.png" height="200px" width="200px">
+          <p class="info-description">
+            El Código César es una técnica de cifrado simple que se usa para encriptar mensajes. Es uno de los métodos más antiguos de cifrado y se llama así en honor a Julio César, quien lo usaba para proteger sus comunicaciones.
+          </p>
+          <h3 class="info-subtitle">¿Cómo funciona?</h3>
+          <p class="info-detail">
+            El Código César trabaja desplazando cada letra en el mensaje por un número fijo de posiciones en el alfabeto. Por ejemplo, si desplazamos las letras 3 posiciones hacia adelante, la letra A se convierte en D, la B en E, y así sucesivamente.
+          </p>
+          <h3 class="info-subtitle">Ejemplo:</h3>
+          <p class="info-detail">
+            Mensaje Original: HELLO<br>
+            Desplazamiento: 3<br>
+            Mensaje Encriptado: KHOOR
+          </p>
+          <h3 class="info-subtitle">Pasos para Encriptar:</h3>
+          <ol class="info-steps">
+            <li>Elige un número para el desplazamiento (por ejemplo, 3).</li>
+            <li>Desplaza cada letra del mensaje original hacia adelante por ese número en el alfabeto.</li>
+            <li>Si llegas al final del alfabeto, vuelve al principio.</li>
+          </ol>
+          <h3 class="info-subtitle">Ventaja:</h3>
+          <p class="info-advantage">
+            Es fácil de entender y de usar.
+          </p>
+          <h3 class="info-subtitle">Desventaja:</h3>
+          <p class="info-disadvantage">
+            Es muy simple y puede ser descifrado fácilmente con métodos modernos.
+          </p>
+        </a>
+      </section>
+
+      <section class="info-section">
+        <a href="morse.html" class="info-link">
+          <div class="overlay">Toca aquí</div>
+          <h2 class="info-title">Código Morse</h2>
+          <img id="morseImage" src="recursos/morse.png" height="200px" width="200px">
+          <p class="info-description">
+            El Código Morse es un sistema de codificación que usa puntos y rayas para representar letras, números y signos de puntuación. Fue inventado por Samuel Morse en el siglo XIX y se usaba para enviar mensajes a través del telégrafo.
+          </p>
+          <h3 class="info-subtitle">¿Cómo funciona?</h3>
+          <p class="info-detail">
+            Cada letra y número tiene una representación única en el Código Morse. Un punto (.) representa una señal corta y una raya (−) representa una señal larga. Las letras se forman combinando puntos y rayas.
+          </p>
+          <h3 class="info-subtitle">Ejemplo:</h3>
+          <p class="info-detail">
+            La letra A en Código Morse es .- (punto raya).<br>
+            El número 1 en Código Morse es .---- (punto seguido de cuatro rayas).
+          </p>
+          <h3 class="info-subtitle">Pasos para Codificar:</h3>
+          <ol class="info-steps">
+            <li>Encuentra la letra o número en la tabla del Código Morse.</li>
+            <li>Escribe el mensaje usando los puntos y rayas correspondientes.</li>
+            <li>Separar cada letra con un espacio corto y cada palabra con un espacio largo.</li>
+          </ol>
+          <h3 class="info-subtitle">Ventaja:</h3>
+          <p class="info-advantage">
+            Es útil para comunicaciones a larga distancia y en condiciones difíciles.
+          </p>
+          <h3 class="info-subtitle">Desventaja:</h3>
+          <p class="info-disadvantage">
+            Puede ser más difícil de aprender y de usar comparado con otros sistemas modernos.
+          </p>
+        </a>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+      <div class="footer-content">
+          <p>&copy; 2024 Piksel Seounguja. Todos los derechos reservados.</p>
+          <p>Diseñado por Piksel Seounguja</p>
+      </div>
+  </footer>
+
+  <div class="custom-cursor"></div>
+  <script src="js/codigos.js"></script>
+</body>
+</html>

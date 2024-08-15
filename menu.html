@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - MorseMystery</title>
+    <meta name="description" content="Descubre el fascinante mundo del cifrado con MorseMystery. Aprende sobre códigos, encriptación Morse y César.">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="varela-round" aria-label="Main navigation">
+            <h1 id="siteTitle">MorseMystery</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="codigos.html">Códigos</a></li>
+                <li><a href="morse.html">Encriptador Morse</a></li>
+                <li><a href="cesar.html">Encriptador César</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h2 class="julius-sans">¡Hola! 🌸<span id="usernameDisplay"></span></h2>
+            <p class="varela-round">
+                Bienvenidas a Piksel Seounguja. Esta es una página creada por chicas ✨ donde te enseñamos a cifrar mensajes y transformar palabras comunes en algo especial, con un toque de misterio y diversión. Si te atrae la idea de ocultar secretos a plena vista, este es el lugar ideal para ti 🔐.
+            </p>
+        
+
+        <section class="contenido">
+            <div class="columna">
+                <h2>¿Qué es la encriptación?</h2>
+                <div class="texto-imagen">
+                    <p class="contexto">
+                        Para prevenir el robo, la alteración o el acceso no autorizado a la información, se utiliza la encriptación para convertir los datos en un código secreto, que solo puede descifrarse con una clave digital única. Los datos encriptados se mantienen seguros tanto cuando están almacenados en computadoras, en tránsito entre ellas, o mientras se procesan, ya sea en entornos locales o en servidores remotos en la nube.
+                    </p>
+                    <img src="recursos/img1.jpg" alt="imagen referencial" width="256px" height="248px">
+                </div>
+            </div>
+            <div class="columna">
+                <h2>Definición de encriptación</h2>
+                <div class="texto-imagen">
+                    <p class="contexto">
+                        La encriptación es el proceso de asegurar información o datos utilizando modelos matemáticos para mezclarlos de tal manera que solo aquellos que poseen la clave adecuada pueden acceder a ellos. Este proceso puede variar en complejidad, y tanto matemáticos como informáticos han desarrollado técnicas específicas de encriptación que se emplean para proteger la información y los datos en los que confían tanto consumidores como empresas diariamente.
+                    </p>
+                    <img src="recursos/img2.jpg" alt="imagen referencial" width="256px" height="248px">
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-encriptacion">
+            <div class="info-encriptacion">
+                <div class="descripcion">
+                    <div class="texto-box">
+                        <h2>¿Cómo funciona la encriptación?</h2>
+                        <p>La encriptación convierte el texto sin formato en texto cifrado utilizando modelos matemáticos criptográficos conocidos como algoritmos. Para revertir este proceso y volver a obtener el texto original, se necesita una clave de descifrado, que es una cadena de números o una contraseña generada también por un algoritmo. Los métodos de cifrado seguros generan un número tan elevado de posibles claves criptográficas que resulta prácticamente imposible para una persona no autorizada adivinar la correcta o usar una computadora para calcularla mediante la prueba de todas las combinaciones posibles (un ataque conocido como fuerza bruta).</p>
+                        <p>Un ejemplo temprano de cifrado sencillo es el “cifrado César”, nombrado así por el emperador romano Julio César, quien lo empleaba en su correspondencia privada. Este método es un tipo de cifrado por sustitución, en el que una letra se reemplaza por otra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Para descifrar el mensaje, el receptor debía conocer la clave del cifrado, como por ejemplo, un desplazamiento de cuatro posiciones hacia la izquierda, donde cada “E” se convierte en “Y”, y así sucesivamente.</p>
+                    </div>
+                    <img id="imagen-encriptacion" src="recursos/img6.jpg" alt="Descripción de la imagen">
+                </div>
+            </div>
+        </section>
+
+    
+        <h2>Tipos de Encriptación</h2>
+        <section class="tabla-encriptacion" aria-label="Tabla que describe los tipos de encriptación y sus características">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Tipo de Encriptación</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Ventajas</th>
+                        <th scope="col">Desventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cifrado Simétrico</td>
+                        <td>Utiliza la misma clave para encriptar y desencriptar la información.</td>
+                        <td>Menos costoso de implementar, requiere menos potencia de cálculo, descifrado más rápido.</td>
+                        <td>Si la clave es obtenida por una persona no autorizada, puede descifrar los mensajes y datos.</td>
+                    </tr>
+                    <tr>
+                        <td>Cifrado Asimétrico</td>
+                        <td>Utiliza dos claves diferentes para encriptar y desencriptar datos. Una clave es pública y otra privada.</td>
+                        <td>Permite encriptar mensajes sin compartir la clave de desencriptado. Mayor seguridad en la transmisión.</td>
+                        <td>Más costoso de implementar, requiere mayor capacidad de procesamiento, no ideal para grandes volúmenes de datos.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <h2>Encriptación Simétrica</h2>
+        <section class="encryption-methods">
+            <article class="method">
+                <h3>Data Encryption Standard (DES)</h3>
+                <img src="recursos/DES.jpg" alt="Diagrama del algoritmo de encriptación DES" class="method-image">
+                <p>
+                    Un estándar de encriptación creado en la década de 1970 y adoptado por el gobierno de EE. UU. en 1977. DES usaba una clave de 56 bits, lo que lo hace inadecuado en el mundo tecnológico actual. A pesar de su obsolescencia, DES influyó en el desarrollo de la criptografía moderna al impulsar la creación de sistemas de encriptación más avanzados.
+                </p>
+            </article>
+            <article class="method">
+                <h3>Triple DES (3DES)</h3>
+                <img src="recursos/3DES.jpg" alt="Diagrama del algoritmo de encriptación Triple DES" class="method-image">
+                <p>
+                    Este método es una evolución de DES que aplica el cifrado de DES tres veces a cada bloque de datos, incrementando el tamaño de la clave y dificultando su descifrado mediante ataques de fuerza bruta. Sin embargo, 3DES ya no se considera seguro y el Instituto Nacional de Estándares y Tecnología (NIST) de EE. UU. lo declaró obsoleto para aplicaciones de software a partir de 2023.
+                </p>
+            </article>
+            <article class="method">
+                <h3>Estándar de Cifrado Avanzado (AES)</h3>
+                <img src="recursos/AES.jpg" alt="Diagrama del algoritmo de encriptación AES" class="method-image">
+                <p>
+                    Introducido en 2001, AES es actualmente el método de encriptación más utilizado. Se basa en una “red de sustitución/permutación” y es un algoritmo de cifrado por bloques de 128 bits, con opciones de claves de 128, 192 o 256 bits.
+                </p>
+            </article>
+            <article class="method">
+                <h3>Twofish</h3>
+                <img src="recursos/Twofish.jpg" alt="Diagrama del algoritmo de encriptación Twofish" class="method-image">
+                <p>
+                    Este método es conocido por ser el más rápido entre los algoritmos de encriptación simétrica y se utiliza tanto en hardware como en software. Es de uso gratuito, aunque no es una fuente patentada ni de código abierto. Twofish es empleado en aplicaciones de encriptación conocidas como PGP (Pretty Good Privacy) y admite claves de hasta 256 bits.
+                </p>
+            </article>
+        </section>
+
+        <h2>Encriptación Asimétrica</h2>
+        <section class="encryption-methods">
+            <article class="method">
+                <h3>RSA</h3>
+                <img src="recursos/RSA.jpg" alt="Imagen de RSA" class="method-image" title="RSA - Método de encriptación asimétrica">
+                <p>Desarrollado por los investigadores del MIT, Rivest, Shamir y Adleman en 1977, RSA es uno de los primeros métodos de encriptación asimétrica. Este método utiliza dos números primos y un valor auxiliar para generar la clave pública. Aunque cualquier persona puede usar la clave pública RSA para cifrar datos, solo quien conozca los números primos podrá descifrarlos. Las claves RSA son generalmente muy grandes (2048 o 4096 bits), lo que las hace más lentas y costosas. Se suelen usar para cifrar las claves compartidas en la encriptación simétrica.</p>
+            </article>
+            <article class="method">
+                <h3>Criptografía de Curva Elíptica (ECC)</h3>
+                <img src="recursos/ECC.jpg" alt="Imagen de ECC" class="method-image" title="ECC - Criptografía de Curva Elíptica">
+                <p>La criptografía de curva elíptica (ECC) es un enfoque avanzado de encriptación asimétrica que se basa en curvas elípticas sobre campos finitos. ECC ofrece un alto nivel de seguridad con claves de menor tamaño, lo que la hace más eficiente. Por ejemplo, una clave pública de 256 bits en ECC ofrece una seguridad equivalente a una clave pública RSA de 3072 bits. ECC se utiliza comúnmente para firmas digitales y para cifrar claves compartidas en sistemas de encriptación simétrica.</p>
+            </article>
+        </section>
+
+    <section class="contenedor-principal">
+        <h2>La importancia de la encriptación de datos</h2>
+
+        <div class="fila-horizontal">
+            <section class="caja-datos" id="importancia-datos">
+                <div class="contenido-box">
+                    <p>La encriptación de datos es una práctica esencial que a menudo pasa desapercibida para los usuarios. Se utiliza para proteger dispositivos como teléfonos inteligentes y computadoras personales, asegurar transacciones financieras, como transferencias bancarias o compras en línea, y garantizar que las comunicaciones, como correos electrónicos y mensajes de texto, permanezcan privadas.</p>
+                </div>
+            </section>
+
+            <section class="caja-datos" id="cifrado-https">
+                <div class="contenido-box">
+                    <p>Cuando la dirección de un sitio web comienza con “https://” (la “s” indica “seguro”), significa que el sitio utiliza cifrado para proteger la transmisión de datos. Las redes privadas virtuales (VPN) también emplean encriptación para evitar que la información enviada desde un dispositivo sea interceptada.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="fila-horizontal">
+            <section class="caja-datos" id="privacidad">
+                <div class="contenido-box">
+                    <p>La encriptación es una técnica esencial para garantizar la seguridad de la información en la era digital. Su principal objetivo es proteger la privacidad de las personas, asegurando que los datos sensibles y personales queden a salvo de accesos no autorizados. Al cifrar la información, se convierte en un formato ilegible para cualquier entidad que no posea la clave adecuada para descifrarla, lo cual es crucial para defenderse contra atacantes y otras amenazas cibernéticas que buscan obtener datos de manera ilícita. Además, la encriptación no solo es una medida de seguridad recomendada, sino que se ha convertido en un requisito obligatorio en numerosos sectores regulados. </p>
+                </div>
+            </section>
+
+            <section class="caja-datos" id="funciones-cifrado">
+                <div class="contenido-box">
+                    <p>El cifrado cumple cuatro funciones clave:</p>
+                    <ul>
+                        <li><strong>Confidencialidad:</strong> Asegura que el contenido de los datos permanezca privado.</li>
+                        <li><strong>Integridad:</strong> Garantiza que el mensaje o los datos provengan de su fuente original.</li>
+                        <li><strong>Autenticación:</strong> Verifica que el contenido del mensaje o los datos no ha sido alterado desde su envío.</li>
+                        <li><strong>No repudio:</strong> Evita que el remitente del mensaje o los datos niegue haberlos enviado.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    
+        <section class="ventajas">
+            <h2>Ventajas de la encriptación</h2>
+            <table>
+                <tr>
+                    <td><strong>Protección de datos en dispositivos:</strong></td>
+                    <td>La encriptación es esencial para mantener seguros los datos que se almacenan y transmiten entre dispositivos y servidores.</td>
+                </tr>
+                <tr>
+                    <td><strong>Garantía de integridad de los datos:</strong></td>
+                    <td>La encriptación protege los datos de manipulaciones y alteraciones por parte de actores maliciosos.</td>
+                </tr>
+                <tr>
+                    <td><strong>Seguridad en las transferencias digitales:</strong></td>
+                    <td>La encriptación es crucial para proteger los datos durante su transferencia a la nube y durante su procesamiento.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cumplimiento normativo:</strong></td>
+                    <td>Muchas leyes y regulaciones de privacidad y seguridad exigen el uso de encriptación para cumplir con los estándares de protección de datos.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="desventajas">
+            <h2>Desventajas de la encriptación</h2>
+            <table>
+                <tr>
+                    <td><strong>Ransomware:</strong></td>
+                    <td>Los atacantes pueden utilizar la encriptación de manera maliciosa, como en el caso del ransomware, para tomar el control de la información y exigir un rescate para su liberación.</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestión de claves:</strong></td>
+                    <td>La encriptación es efectiva solo si las claves criptográficas se mantienen seguras. La gestión inadecuada de estas claves puede comprometer la seguridad de los datos encriptados.</td>
+                </tr>
+                <tr>
+                    <td><strong>Computación cuántica:</strong></td>
+                    <td>La computación cuántica podría, en el futuro, ser capaz de romper los algoritmos de encriptación actuales, lo que requeriría el desarrollo de nuevos métodos de cifrado.</td>
+                </tr>
+            </table>
+        </section>
+
+    </main> 
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Piksel Seounguja. Todos los derechos reservados.</p>
+            <p>Diseñado por Piksel Seounguja</p>
+        </div>
+    </footer>
+    
+    <div class="custom-cursor"></div>
+    <script src="js/menu.js"></script>
+</body>
+</html>
