@@ -1,39 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Mostrar el nombre de usuario si está almacenado
-    const username = localStorage.getItem("username");
-    const usernameDisplay = document.getElementById("usernameDisplay");
-    if (username && usernameDisplay) {
-        usernameDisplay.textContent = `, ${username}!`;
-    }
-
-    // Crear y agregar el cursor personalizado
-    const cursor = document.querySelector('.custom-cursor');
-
-    // Actualizar la posición del cursor personalizado
+document.addEventListener('DOMContentLoaded', () => {
+    // Variables para los elementos HTML
+    const morseImage = document.getElementById('morseImage');
+    const infoLink = document.querySelector('.info-link');
+    const customCursor = document.querySelector('.custom-cursor');
+  
+    // Cambiar la imagen de Código Morse cuando el mouse está sobre ella
+    morseImage.addEventListener('mouseover', () => {
+      morseImage.style.opacity = '0.8';
+    });
+  
+    morseImage.addEventListener('mouseout', () => {
+      morseImage.style.opacity = '1';
+    });
+  
+    // Funcionalidad del cursor personalizado
     document.addEventListener('mousemove', (e) => {
-        cursor.style.left = `${e.pageX}px`;
-        cursor.style.top = `${e.pageY}px`;
+      customCursor.style.left = `${e.pageX}px`;
+      customCursor.style.top = `${e.pageY}px`;
     });
-
-    // Cambiar color del cursor al pasar sobre elementos clicables
-    document.addEventListener('mouseover', (e) => {
-        if (e.target.matches('a, button')) {
-            cursor.style.backgroundColor = '#000000';
-        }
+  
+    // Cambio de cursor al pasar sobre enlaces
+    infoLink.addEventListener('mouseover', () => {
+      customCursor.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+      customCursor.style.border = '2px solid #fff';
     });
-
-    document.addEventListener('mouseout', (e) => {
-        if (e.target.matches('a, button')) {
-            cursor.style.backgroundColor = '#EB0056';
-        }
+  
+    infoLink.addEventListener('mouseout', () => {
+      customCursor.style.backgroundColor = 'transparent';
+      customCursor.style.border = 'none';
     });
-
-    // Cambiar color del cursor al hacer clic
-    document.addEventListener('mousedown', () => {
-        cursor.style.backgroundColor = '#000000';
-    });
-
-    document.addEventListener('mouseup', () => {
-        cursor.style.backgroundColor = '#EB0056';
-    });
-});
+  });
+  

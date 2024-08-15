@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Julius+Sans+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -21,14 +22,24 @@
     <main>
         <div class="container">
             <h2 class="varela-round-regular">Ingresa tus datos</h2>
-            <img src="https://propulsorio.com/wp-content/uploads/2021/08/GUIA-U2.png" alt="Imagen de ejemplo" class="imagen-mediana" width="300px">
+            <img src="https://propulsorio.com/wp-content/uploads/2021/08/GUIA-U2.png" alt="Imagen de ejemplo"
+                class="imagen-mediana" width="300px">
             <form id="loginForm" action="menu.html" method="get">
-                <label for="username" class="varela-round-regular">Nombre:</label>
-                <input type="text" id="username" name="username" class="text-input varela-round-regular" autocomplete="username" required>
+                <label for="firstName" class="varela-round-regular">Nombres:</label>
+                <input type="text" id="firstName" name="firstName" class="text-input varela-round-regular" required>
+
+                <label for="lastName" class="varela-round-regular">Apellidos:</label>
+                <input type="text" id="lastName" name="lastName" class="text-input varela-round-regular" required>
+
+                <label for="phoneNumber" class="varela-round-regular">Número de Teléfono:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="text-input varela-round-regular"
+                    pattern="[0-9]{9}" placeholder="999 999 999" required>
+
                 <div class="checkbox-container">
                     <input type="checkbox" id="rememberMe" name="rememberMe" autocomplete="off">
                     <label for="rememberMe" class="varela-round-regular">Recordar Nombre</label>
                 </div>
+
                 <button type="submit" class="submit-button varela-round-regular">Iniciar Sesión</button>
             </form>
         </div>
@@ -44,4 +55,3 @@
 </body>
 
 </html>
-

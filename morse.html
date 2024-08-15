@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Morse</title>
+    <link rel="stylesheet" href="css/morse.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main id="main-content" class="main-container">
+        <section id="morse-converter" class="morse-section">
+            <div class="contenedor">
+                <h1 id="convertir">Convertir texto a</h1>
+                <h1 id="codigo">Código morse</h1>
+                <p id="subtitulo">¿Qué es lo que deseas decir?</p>
+                <textarea id="inputText" rows="4" cols="50" class="input-textarea"></textarea>
+                <br><br>
+                <button id="convert-button" onclick="processText()">Convertir</button>
+
+                <h2 id="resultado-titulo">Resultado:</h2>
+                <textarea id="resultText" rows="4" cols="50" class="result-textarea" readonly></textarea>
+            </div>
+        </section>
+
+        <section id="video-background" class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video" class="background-video">
+                    <source src="recursos/Diseño_sin_titulo.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/morse.js"></script>
+</body>
+
+</html>
