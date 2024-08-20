@@ -1,21 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
+    const rememberMeCheckbox = document.getElementById('rememberMe');
+    const firstNameInput = document.getElementById('firstName');
 
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Previene el envío del formulario para propósitos de demostración
+    if (localStorage.getItem('rememberMe') === 'true') {
+        firstNameInput.value = localStorage.getItem('firstName') || '';
+        rememberMeCheckbox.checked = true;
+    }
 
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const phoneNumber = document.getElementById('phoneNumber').value;
-        const rememberMe = document.getElementById('rememberMe').checked;
+    function handleFormSubmit(event) {
+        event.preventDefault(); 
 
-        console.log('Formulario enviado:');
-        console.log('Nombres:', firstName);
-        console.log('Apellidos:', lastName);
-        console.log('Número de Teléfono:', phoneNumber);
-        console.log('Recordar Nombre:', rememberMe);
+        if (rememberMeCheckbox.checked) {
+            localStorage.setItem('rememberMe', 'true');
+            localStorage.setItem('firstName', firstNameInput.value);
+        } else {
+            localStorage.removeItem('rememberMe');
+            localStorage.removeItem('firstName');
+        }
 
-        // Si deseas enviar el formulario de verdad después de mostrar el mensaje, descomenta la siguiente línea
-        loginForm.submit();
-    });
+        window.location.href = loginForm.action; 
+    }
+
 });
