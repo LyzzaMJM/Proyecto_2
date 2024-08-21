@@ -1,25 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
-    const rememberMeCheckbox = document.getElementById('rememberMe');
-    const firstNameInput = document.getElementById('firstName');
+    const morseMap = {
+        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..',
+        'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
+        'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 'Z': '--..',
+        '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+        '8': '---..', '9': '----.',
+        ' ': '/',
+    };
 
-    if (localStorage.getItem('rememberMe') === 'true') {
-        firstNameInput.value = localStorage.getItem('firstName') || '';
-        rememberMeCheckbox.checked = true;
+    const textMap = {};
+    for (const [key, value] of Object.entries(morseMap)) {
+        textMap[value] = key;
     }
 
-    function handleFormSubmit(event) {
-        event.preventDefault(); 
+    const inputTextArea = document.getElementById('entrada-texto');
+    const outputTextArea = document.getElementById('texto-resultado');
+    const convertButton = document.getElementById('boton-convertir');
 
-        if (rememberMeCheckbox.checked) {
-            localStorage.setItem('rememberMe', 'true');
-            localStorage.setItem('firstName', firstNameInput.value);
+    function textToMorse(text) {
+        return text.toUpperCase().split('').map(char => morseMap[char] || '').join(' ');
+    }
+
+    function morseToText(morse) {
+        return morse.split(' ').map(code => textMap[code] || '').join('');
+    }
+
+    convertButton.addEventListener('click', () => {
+        const inputText = inputTextArea.value.trim();
+
+        if (inputText.includes('.') || inputText.includes('-')) {
+            outputTextArea.value = morseToText(inputText);
         } else {
-            localStorage.removeItem('rememberMe');
-            localStorage.removeItem('firstName');
+            outputTextArea.value = textToMorse(inputText);
         }
-
-        window.location.href = loginForm.action; 
-    }
-
+    });
 });
